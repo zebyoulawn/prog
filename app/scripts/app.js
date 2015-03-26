@@ -35,7 +35,7 @@ angular
  
  var app = angular.module('progApp', [ngAnimate]);
  app.controller('barController', function ($scope){
-   $scope.checkoutwrap = 'start-class';
+   $scope.checkoutWrap = 'start-class';
  });
  app.animation('.fadeOut', function () {
   return {
@@ -50,3 +50,7 @@ angular
     }
   };
 });
+
+
+
+
