@@ -15,3 +15,24 @@ angular.module('progApp')
       'Karma'
     ];
   });
+
+// Progress Bar
+
+
+angular.module('progApp')
+  .controller('TimetableCtrl', function TimetableCtrl($scope, $http) {
+  $http.get('src/order_status.json')
+  .success(function(data) { $scope.orderStatus = data.orderStatus; });
+   
+});
+
+
+angular.module('progApp')
+  .controller('Carlos', function Carlos($scope, $http) {
+  $http.get('src/order_status.json')
+  .success(function(data) { $scope.orderStatus = data.orderStatus; });
+   
+});
+
+ 
+

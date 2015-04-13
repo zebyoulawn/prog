@@ -1,47 +1,69 @@
-<div class="jumbotron">
-  <h1>Progress</h1>
-  <h3>Progress UI</h3>
-  <p class="lead">
-    <img src="images/z.png" alt="zebyoulawn"><br>
-  </p>
-
+<h1>Delivery App</h1>
+    
+    
+      <div ng-controller="TimetableCtrl">
+       
+        
+          <p>{{ orderStatus.driver_name }}</p>
+          <p>{{ orderStatus.driver_image }}</p>
+          <p>{{ orderStatus.order_placed }}</p>
+          <p>{{ orderStatus.restaurant_notified }}</p>
+          <p>{{ orderStatus.driver_at_restaurant }}</p>
+          <p>{{ orderStatus.food_picked_up }}</p>
+          <p>{{ orderStatus.delivered_to_customer }}</p>
+          <p>{{ orderStatus.estimated_delivery_time }}</>
+        
+      </div>
+    
+<div ng-controller="Carlos" class="delivery">
      <!-- Start Prog UI -->
 
-
-<h1>Order Progress Bar</h1>
   
-
+ <p>Your Order was placed at<h5>{{ orderStatus.order_placed }}</h5></p>
 <div class="checkoutWrap">
-  <ul class="checkoutBar" ng-controller="barController">
+  <ul class="checkoutBar">
 
     <li class="visited first">
-      <a href="#">Login</a>
+      <a href="#">Order Placed</a>
     </li>
 
-    <li class="previous visited">Order Placed</li>
+    <li class="previous visited">Notified {{ orderStatus.restaurant_notified }}</li>
 
-    <li class="active">Order Received</li>
+    <li class="active">Driver Sent</li>
 
-    <li class="next">Review & Payment</li>
+    <li class="next">Food Picked Up</li>
 
-    <li class="">Complete</li>
+    <li class="">Delivery</li>
 
   </ul>
 </div>
+
+
+
+<br>
+<br>
+<br>
+<br>
+<br>
+
+
+  <p>Your Order is being brought by<h5>{{ orderStatus.driver_name }}</h5></p>
+  <p>
+    <img src="images/z.png" alt="zebyoulawn"><br>
+  </p>
+
+  <h3>Estimated time to delivery</h3>
+  <h1>12 minutes</h1>
+  
+</div>  
+
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+
     <!-- End Prog UI -->
-
-    
-</div>
-<!-- End Jumbotron -->
-
-
-
-
-<hr>
-<h1>Progress</h1>
-<hr>
-
- 
-
-
-
