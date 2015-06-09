@@ -14,6 +14,11 @@ body {
   padding: 0;
 }
 
+.delivery{
+  text-align: center;
+  width: 1275px;
+}
+
 /* Everything but the jumbotron gets side spacing for mobile first views */
 .header,
 .marketing,
@@ -156,7 +161,7 @@ h1 {
   color: #444;
   font-family: 'PT Sans Caption', sans-serif;
   margin: 40px auto;
-  max-width: 1200px;
+  max-width: 1400px;
   position: relative;
 }
 ul.checkoutBar {

@@ -1,21 +1,9 @@
-<h1>Delivery App</h1>
+<h1 class="delivery">Delivery App</h1>
     
     
-      <div ng-controller="TimetableCtrl">
-       
-        
-          <p>{{ orderStatus.driver_name }}</p>
-          <p>{{ orderStatus.driver_image }}</p>
-          <p>{{ orderStatus.order_placed }}</p>
-          <p>{{ orderStatus.restaurant_notified }}</p>
-          <p>{{ orderStatus.driver_at_restaurant }}</p>
-          <p>{{ orderStatus.food_picked_up }}</p>
-          <p>{{ orderStatus.delivered_to_customer }}</p>
-          <p>{{ orderStatus.estimated_delivery_time }}</>
-        
-      </div>
+      
     
-<div ng-controller="Carlos" class="delivery">
+<div ng-controller="MainCtrl" class="delivery">
      <!-- Start Prog UI -->
 
   
@@ -23,17 +11,15 @@
 <div class="checkoutWrap">
   <ul class="checkoutBar">
 
-    <li class="visited first">
-      <a href="#">Order Placed</a>
-    </li>
+    <li ng-show="goCats" class="visited first">Order Placed</li>
+    
+    <li class="previous visited">Notified</li>
 
-    <li class="previous visited">Notified {{ orderStatus.restaurant_notified }}</li>
-
-    <li class="active">Driver Sent</li>
+    <li ng-class="{'active': orderStatus.order_placed }">Driver Sent</li>
 
     <li class="next">Food Picked Up</li>
 
-    <li class="">Delivery</li>
+    <li ng-show="orderStatus.delivered_to_customer" class="">Delivery</li>
 
   </ul>
 </div>
