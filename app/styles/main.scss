@@ -75,7 +75,7 @@ body {
 /* Responsive: Portrait tablets and up */
 @media screen and (min-width: 768px) {
   .container {
-    max-width: 1030px;
+    max-width: 1270px;
   }
 
   /* Remove the padding we set earlier */
@@ -161,12 +161,12 @@ h1 {
   color: #444;
   font-family: 'PT Sans Caption', sans-serif;
   margin: 40px auto;
-  max-width: 1400px;
+  max-width: 1270px;
   position: relative;
 }
 ul.checkoutBar {
   li {
-    color: red;
+    color: black;
     display: block;
     font-size: 16px;
     font-weight: 600;
@@ -198,15 +198,17 @@ ul.checkoutBar {
         z-index: 99999;
       }
     }
+    
     &.visited {
-      background: purple;
-      color: purple;
+      background: blue;
+      color: blue;
       z-index: 99999;
       &:before {
-       background: purple; 
+       background: blue; 
         z-index: 99999;
       }
     }
+    
     &:nth-child(1) {
       &:before {
         content: "1";
@@ -239,7 +241,7 @@ ul.checkoutBar {
     }
   }
   a {
-    color: purple;
+    color: blue;
     font-size: 16px;
     font-weight: 600;
     text-decoration: none;  
@@ -274,7 +276,7 @@ ul.checkoutBar {
   position: absolute;
   width: 100%;
   &:before {
-    background: purple;
+    background: clear;
     @include inner-shadow;
     border-radius: 15px;
     content: " ";
@@ -301,14 +303,15 @@ ul.checkoutBar {
       &.visited {
         background: none;
         &:after {
-          background: purple;
+          background: blue;
           @include inner-shadow;
           content: "";
           height: 15px;
-          left: 50%;
+          left: -10%;
           position: absolute;
+          border-radius: 15px;
           top: -50px;
-          width: 100%;
+          width: 153%;
           z-index: 99; 
         }  
       }
@@ -316,3 +319,71 @@ ul.checkoutBar {
   }
 } 
 
+@media all and (min-width: 800px) {
+ .checkoutBar li.active:after {
+    -webkit-animation: myanimation 3s 0;
+    background: blue;
+    @include inner-shadow;
+    content:"";
+    height: 15px;
+    width: 100%;
+    left: 50%;
+    position: absolute;
+    top: -50px;
+    z-index: 0;
+  }
+  .checkoutWrap {
+    margin: 80px auto;
+  }
+  ul.checkoutBar {
+  @include inner-shadow;
+  @include gray-stripe;
+  border-radius: 15px;
+  height: 15px;
+  margin: 0 auto;
+  padding: 0;
+  position: absolute;
+  width: 100%;
+  &:before {
+    background: clear;
+    @include inner-shadow;
+    border-radius: 15px;
+    content: " ";
+    height: 15px;
+    left: 0;
+    position: absolute;
+    width: 10%;
+  }
+   li {
+      display: inline-block;
+      margin: 50px 0 0;
+      padding: 0;
+      text-align: center;
+      width: 19%;
+      &:before {
+        height: 45px;
+        left: 40%;
+        line-height: 45px;
+        position: absolute;
+        top: -65px;
+        width: 45px;
+        z-index: 0;
+      }
+      &.visited {
+        background: none;
+        &:after {
+          background: blue;
+          
+          content: "";
+          height: 15px;
+          left: -10%;
+          position: absolute;
+          border-radius: 15px;
+          top: -50px;
+          width: 153%;
+          z-index: 0; 
+        }  
+      }
+    }
+  }
+} 

@@ -11,15 +11,15 @@
 <div class="checkoutWrap">
   <ul class="checkoutBar">
 
-    <li ng-show="goCats" class="visited first">Order Placed</li>
+    <li ng-class="{ visited : orderStatus.order_placed}">Order Placed</li>
     
-    <li class="previous visited">Notified</li>
+    <li ng-class="{ active : orderStatus.restaurant_notified}">Notified</li>
 
-    <li ng-class="{'active': orderStatus.order_placed }">Driver Sent</li>
+    <li ng-class="{ active : orderStatus.driver_at_restaurant}">Driver Sent</li>
 
-    <li class="next">Food Picked Up</li>
+    <li ng-class="{ active : orderStatus.food_picked_up}">Food Picked Up</li>
 
-    <li ng-show="orderStatus.delivered_to_customer" class="">Delivery</li>
+    <li ng-class="{ visited : orderStatus.delivered_to_customer}">Delivery</li>
 
   </ul>
 </div>
