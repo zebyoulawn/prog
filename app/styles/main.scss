@@ -161,7 +161,7 @@ h1 {
   color: #444;
   font-family: 'PT Sans Caption', sans-serif;
   margin: 40px auto;
-  max-width: 1070px;
+  max-width: 975px;
   position: relative;
 }
 ul.checkoutBar {
@@ -188,7 +188,7 @@ ul.checkoutBar {
       text-shadow: 1px 1px rgba(0, 0, 0, 0.2);
       top: 4px;
       width: 35px;
-      z-index: 999;      
+      z-index: 9999;      
     }
      &.active {
       color: blue;
@@ -202,7 +202,7 @@ ul.checkoutBar {
     &.visited {
       background: blue;
       color: blue;
-      z-index: 99999;
+      z-index: 0;
       &:before {
        background: blue; 
         z-index: 99999;
@@ -227,6 +227,7 @@ ul.checkoutBar {
      &:nth-child(4) {
       &:before {
         content: "4";
+        z-index: 999999;
       }
     }
     &:nth-child(5) {
@@ -345,14 +346,14 @@ ul.checkoutBar {
   position: absolute;
   width: 100%;
   &:before {
-    background: clear;
+    @include gray-stripe;
     @include inner-shadow;
     border-radius: 15px;
     content: " ";
     height: 15px;
-    left: 0;
+    left: -7.15%;
     position: absolute;
-    width: 10%;
+    width: 115.5%;
   }
    li {
       display: inline-block;
@@ -376,11 +377,11 @@ ul.checkoutBar {
           
           content: "";
           height: 15px;
-          left: -45%;
+          left: -46%;
           position: absolute;
           border-radius: 15px;
           top: -50px;
-          width: 193%;
+          width: 199.5%;
           z-index: 0; 
         }  
       }

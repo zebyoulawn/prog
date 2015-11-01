@@ -5,9 +5,11 @@
     
 <div ng-controller="MainCtrl" class="delivery">
      <!-- Start Prog UI -->
-
+<p>
+    <img src="images/z.png" alt="zebyoulawn"><br>
+  </p>
   
- <p>Your Order was placed at<h5>{{ orderStatus.order_placed }}</h5></p>
+ <p>Your Order was placed at<h5>{{ orderStatus.order_placed | date:'MM/dd/yyy @ h:mma' }}</h5></p>
 <div class="checkoutWrap">
   <ul class="checkoutBar">
 
@@ -34,9 +36,7 @@
 
 
   <p>Your Order is being brought by<h5>{{ orderStatus.driver_name }}</h5></p>
-  <p>
-    <img src="images/z.png" alt="zebyoulawn"><br>
-  </p>
+  
 
   <h3>Estimated time to delivery</h3>
   <h1>12 minutes</h1>
