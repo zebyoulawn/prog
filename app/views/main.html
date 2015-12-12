@@ -9,7 +9,7 @@
     <img src="images/z.png" alt="zebyoulawn"><br>
   </p>
   
- <p>Your Order was placed at<h5>{{ orderStatus.order_placed | date:'MM/dd/yyy @ h:mma' }}</h5></p>
+ <p>Your Order was placed on<h5>{{ orderStatus.order_placed | iso | date: 'EEEE, MMMM d, y @ h:mm a' }}</h5></p>
 <div class="checkoutWrap">
   <ul class="checkoutBar">
 

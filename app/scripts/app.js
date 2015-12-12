@@ -8,8 +8,7 @@
  *
  * Main module of the application.
  */
-angular
-  .module('progApp', [
+angular.module('progApp', [
     'ngAnimate',
     'ngCookies',
     'ngResource',

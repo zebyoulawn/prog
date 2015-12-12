@@ -9,10 +9,6 @@
  */
 
 // Progress Bar
-
-
-
-
 angular.module('progApp')
   .controller('MainCtrl', function ($scope, $http) {
     $http.get('src/order_status.json')
@@ -23,5 +19,8 @@ angular.module('progApp')
   });
    
 });
+
+
+
 
 
